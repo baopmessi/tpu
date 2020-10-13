@@ -154,7 +154,7 @@ def main(unused_argv):
       writer = tf.summary.FileWriter("./efficientnet-l2-nasfpn-ssl/checkpoint_arch/", sess.graph)
       writer.close()
       print(' - Loading the checkpoint...')
-      #saver.restore(sess, FLAGS.checkpoint_path)
+      saver.restore(sess, FLAGS.checkpoint_path)
 
       image_files = tf.gfile.Glob(FLAGS.image_file_pattern)
       for i, image_file in enumerate(image_files):
