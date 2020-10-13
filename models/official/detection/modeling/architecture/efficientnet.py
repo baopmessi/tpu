@@ -16,8 +16,8 @@
 """Contains definitions EfficientNet."""
 
 import sys
-sys.path.append('tpu/models/official/efficientnet')
-sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/')
+sys.path.append('./models/official/efficientnet')
+sys.path.append('./models/')
 from official.efficientnet import efficientnet_builder
 
 
