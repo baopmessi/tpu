@@ -22,7 +22,10 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
-
+import os.path
+import sys
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/official/efficientnet/')
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/official/')
 import collections
 import functools
 import math
@@ -33,7 +36,7 @@ import six
 from six.moves import xrange
 import tensorflow.compat.v1 as tf
 
-import utils
+from efficientnet import utils
 from condconv import condconv_layers
 
 GlobalParams = collections.namedtuple('GlobalParams', [
@@ -518,6 +521,7 @@ class Model(tf.keras.Model):
     else:
       channel_axis = -1
       self._spatial_dims = [1, 2]
+
 
     # Stem part.
     self._conv_stem = utils.Conv2D(

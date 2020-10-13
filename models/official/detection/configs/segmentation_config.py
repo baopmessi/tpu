@@ -14,8 +14,12 @@
 # ==============================================================================
 """Config template to train Segmentation."""
 
+import os.path
+import sys
+sys.path.append('tpu/models/hyperparameters/')
+
 from configs import base_config
-from hyperparameters import params_dict
+import params_dict
 
 # pylint: disable=line-too-long
 RESNET_FROZEN_VAR_PREFIX = r'(resnet\d+)\/(conv2d(|_([1-9]|10))|batch_normalization(|_([1-9]|10)))\/'

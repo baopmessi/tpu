@@ -15,7 +15,7 @@
 """Config template to train ShapeMask."""
 
 from configs import detection_config
-from hyperparameters import params_dict
+import params_dict
 
 # pylint: disable=line-too-long
 

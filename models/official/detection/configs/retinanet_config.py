@@ -15,8 +15,12 @@
 """Config template to train Retinanet."""
 
 from configs import detection_config
-from hyperparameters import params_dict
+import os.path
+import sys
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/hyperparameters/')
 
+from configs import base_config
+import params_dict
 # pylint: disable=line-too-long
 RETINANET_CFG = params_dict.ParamsDict(detection_config.DETECTION_CFG)
 RETINANET_CFG.override({

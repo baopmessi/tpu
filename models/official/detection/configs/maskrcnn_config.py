@@ -17,7 +17,12 @@
 from configs import detection_config
 import sys
 sys.path.insert(0, 'tpu/models')
-from hyperparameters import params_dict
+import os.path
+import sys
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/hyperparameters/')
+
+from configs import base_config
+import params_dict
 
 # pylint: disable=line-too-long
 

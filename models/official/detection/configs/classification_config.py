@@ -14,8 +14,11 @@
 # ==============================================================================
 """Config template to train classification models."""
 
+import os.path
+import sys
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/hyperparameters/')
 from configs import base_config
-from hyperparameters import params_dict
+import params_dict
 
 # pylint: disable=line-too-long
 CLASSIFICATION_CFG = params_dict.ParamsDict(base_config.BASE_CFG)

@@ -13,11 +13,18 @@
 # limitations under the License.
 # ==============================================================================
 """Model Builder for EfficientNet."""
-
-from __future__ import absolute_import
+#from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+
+import os.path
+import sys
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/official/efficientnet/')
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/official/')
+
+
+import efficientnet_model
 import functools
 import os
 import re
@@ -26,8 +33,7 @@ import numpy as np
 import six
 import tensorflow.compat.v1 as tf
 
-import efficientnet_model
-import utils
+from efficientnet import utils
 MEAN_RGB = [0.485 * 255, 0.456 * 255, 0.406 * 255]
 STDDEV_RGB = [0.229 * 255, 0.224 * 255, 0.225 * 255]
 
@@ -261,6 +267,7 @@ def build_model(images,
   if override_params and override_params.get('drop_connect_rate', None):
     override_params['survival_prob'] = 1 - override_params['drop_connect_rate']
 
+  print( sys.path)
   if not training or fine_tuning:
     if not override_params:
       override_params = {}

@@ -17,6 +17,7 @@
 
 import sys
 sys.path.append('tpu/models/official/efficientnet')
+sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/')
 from official.efficientnet import efficientnet_builder
 
 

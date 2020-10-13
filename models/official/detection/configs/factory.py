@@ -19,7 +19,7 @@ from configs import maskrcnn_config
 from configs import retinanet_config
 from configs import segmentation_config
 from configs import shapemask_config
-from hyperparameters import params_dict
+import params_dict
 
 
 def config_generator(model):
