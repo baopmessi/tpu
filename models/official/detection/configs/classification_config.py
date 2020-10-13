@@ -16,7 +16,7 @@
 
 import os.path
 import sys
-sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/hyperparameters/')
+sys.path.append('./models/hyperparameters/')
 from configs import base_config
 import params_dict
 
