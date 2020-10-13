@@ -24,8 +24,8 @@ from __future__ import division
 from __future__ import print_function
 import os.path
 import sys
-sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/official/efficientnet/')
-sys.path.append('/home/quocbao/Desktop/github_codes/tpu/models/official/')
+sys.path.append('./models/official/efficientnet/')
+sys.path.append('./tpu/models/official/')
 import collections
 import functools
 import math
