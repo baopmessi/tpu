@@ -25,7 +25,7 @@ from __future__ import print_function
 import os.path
 import sys
 sys.path.append('./models/official/efficientnet/')
-sys.path.append('./tpu/models/official/')
+sys.path.append('./models/official/')
 import collections
 import functools
 import math
@@ -36,7 +36,7 @@ import six
 from six.moves import xrange
 import tensorflow.compat.v1 as tf
 
-import utils
+from efficientnet import utils
 from condconv import condconv_layers
 
 GlobalParams = collections.namedtuple('GlobalParams', [
